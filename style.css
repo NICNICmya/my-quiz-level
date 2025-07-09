@@ -479,6 +479,29 @@ body::before {
     }
 }
 
+.kakao-left-ad-wrapper {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 160px;
+    height: 600px;
+    z-index: 9998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 모바일에서는 좌우 광고 모두 숨김 */
+@media (max-width: 768px) {
+    .kakao-left-ad-wrapper,
+    .kakao-side-ad-wrapper {
+        display: none;
+    }
+}
+
+
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     .main-title {
