@@ -472,6 +472,13 @@ body::before {
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* 모바일에서는 우측 광고 숨김 */
+@media (max-width: 768px) {
+    .kakao-side-ad-wrapper {
+        display: none;
+    }
+}
+
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     .main-title {
