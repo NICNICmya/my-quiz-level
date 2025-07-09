@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 브레인 퀴즈쇼 - 당신의 상식 레벨은?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 메인 화면 -->
+    <div id="main-screen" class="screen active">
+        <div class="quiz-show-header">
+            <h1 class="main-title">🧠 브레인 퀴즈쇼</h1>
+            <p class="subtitle">당신의 상식 레벨을 확인해보세요!</p>
+        </div>
+        
+        <div class="topic-selection">
+            <h2>주제를 선택하세요</h2>
+            <div class="topic-grid">
+                <button class="topic-btn" data-topic="geography">
+                    <div class="topic-icon">🌍</div>
+                    <div class="topic-name">지리</div>
+                    <div class="topic-desc">수도, 지명, 산</div>
+                </button>
+                <button class="topic-btn" data-topic="history">
+                    <div class="topic-icon">📚</div>
+                    <div class="topic-name">역사·인물</div>
+                    <div class="topic-desc">한국사, 세계사</div>
+                </button>
+                <button class="topic-btn" data-topic="science">
+                    <div class="topic-icon">🔬</div>
+                    <div class="topic-name">과학·기술</div>
+                    <div class="topic-desc">물리, 화학, IT</div>
+                </button>
+                <button class="topic-btn" data-topic="culture">
+                    <div class="topic-icon">🎭</div>
+                    <div class="topic-name">문화·예술</div>
+                    <div class="topic-desc">문학, 음악, 스포츠</div>
+                </button>
+                <button class="topic-btn" data-topic="life">
+                    <div class="topic-icon">🏠</div>
+                    <div class="topic-name">생활상식</div>
+                    <div class="topic-desc">일상, 언어, 상식</div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 퀴즈 화면 -->
+    <div id="quiz-screen" class="screen">
+        <div class="quiz-header">
+            <div class="quiz-info">
+                <span id="current-topic" class="topic-badge"></span>
+                <span id="question-counter" class="question-counter">1 / 25</span>
+            </div>
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+        </div>
+
+        <div class="quiz-content">
+            <div class="question-box">
+                <h3 id="question-text" class="question-text"></h3>
+            </div>
+            
+            <div class="options-container">
+                <button class="option-btn" data-option="A">
+                    <span class="option-letter">A</span>
+                    <span class="option-text"></span>
+                </button>
+                <button class="option-btn" data-option="B">
+                    <span class="option-letter">B</span>
+                    <span class="option-text"></span>
+                </button>
+                <button class="option-btn" data-option="C">
+                    <span class="option-letter">C</span>
+                    <span class="option-text"></span>
+                </button>
+                <button class="option-btn" data-option="D">
+                    <span class="option-letter">D</span>
+                    <span class="option-text"></span>
+                </button>
+            </div>
+
+            <div class="quiz-controls">
+                <button id="next-btn" class="next-btn" disabled>다음 문제</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 결과 화면 -->
+    <div id="result-screen" class="screen">
+        <div class="result-container">
+            <div class="result-header">
+                <h2>🎉 퀴즈 완료!</h2>
+                <div id="final-score" class="final-score"></div>
+            </div>
+            
+            <div class="level-card">
+                <div id="level-badge" class="level-badge"></div>
+                <div id="level-title" class="level-title"></div>
+                <div id="level-description" class="level-description"></div>
+            </div>
+
+            <div class="result-details">
+                <div class="score-breakdown">
+                    <div class="score-item">
+                        <span class="score-label">정답</span>
+                        <span id="correct-count" class="score-value correct">0</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="score-label">오답</span>
+                        <span id="wrong-count" class="score-value wrong">0</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="score-label">정답률</span>
+                        <span id="accuracy" class="score-value">0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-actions">
+                <button id="retry-btn" class="action-btn primary">다시 도전</button>
+                <button id="home-btn" class="action-btn secondary">홈으로</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
